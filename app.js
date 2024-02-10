@@ -20,8 +20,8 @@ const userRoutes = require("./routes/userRoutes");
 
 const MongoDBStore = require("connect-mongo");
 
-const dbURL = process.env.DB_URL;
-// const dbURL = "mongodb://localhost:27017/yelp-camp";
+const dbURL = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
+const dbPORT = process.env.PORT || 3000;
 
 mongoose.connect(dbURL);
 
@@ -101,6 +101,6 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-app.listen(3000, () => {
-  console.log("Serving at port 3000");
+app.listen(dbPORT, () => {
+  console.log(`Serving at port ${dbPORT}`);
 });
