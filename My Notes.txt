@@ -1,0 +1,18 @@
+1. 
+npm init -y :to create the necessary json files
+
+2.
+npm i express ejs mongoose :Install the required frameworks and libraries
+  - express
+  - ejs
+  - mongoose
+  
+ 3.
+ Create an "index.js" or "app.js" file
+ 
+ 4.
+ - Import express
+ - Create a connection on your preferred port
+ 
+ 5.
+ Create "Views" folder where all .ejs files will be located
